@@ -1,2 +1,5 @@
 # GOLANG-MONGODB
 created REST API with Golang that interacts with MongoDB.
+go.mongodb.org/mongo-driver/mongo is used instead of gopkg to suit the new version of mongodb
+
+This project is a Go-based RESTful API that interacts with a MongoDB database to manage user data. It provides endpoints to create, retrieve, and delete user records, utilizing the `gopkg.in/mgo.v2` package for MongoDB connectivity. The API is built using the `httprouter` library to handle HTTP requests and responses. Users can send POST requests to `/user` to create a new user, GET requests to `/user/:id` to fetch a specific user by ID, and DELETE requests to `/user/:id` to remove a user. Additionally, a GET request to `/user` retrieves all users in the database. The user data, including fields like name, gender, and age, is stored in the `users` collection of the `mongo-golang` database. The application runs on `localhost:9000` and supports JSON data exchange. Due to the deprecated nature of `mgo.v2`, switching to the modern `go.mongodb.org/mongo-driver` is recommended for better compatibility with newer MongoDB versions like 8.0.
